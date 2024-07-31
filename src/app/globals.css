@@ -2,26 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  .bg-gradient-text {
+    @apply bg-gradient-to-r from-[#186af9] from-40% to-[#1392fa] to-60% bg-clip-text text-transparent;
+  }
+  .blue-ball {
+    @apply absolute size-72 rounded-full bg-blue-700 tablet:-top-10 -left-28 z-[-9] blur-2xl;
+  }
+  .flex-sc{
+    @apply w-screen h-screen flex items-center justify-center
   }
 }
-
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  width: 100%;
+  height: 100%;
+  /* background-color: black; */
+  /* color: white; */
+  overflow-x: hidden;
+}
+.red {
+  border: 1px solid red;
+}
+.green {
+  border: 1px solid greenyellow;
+}
+.split-text-sum .line{
+  overflow-y: hidden;
+  width: 100%;
+  /* border: 1px solid red; */
+
+}
+.transition-width{
+  transition: width 1s ease;
+}
+.splite-text .char{
+  transform: translateX("200%");
 }
