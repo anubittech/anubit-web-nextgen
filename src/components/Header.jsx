@@ -122,7 +122,7 @@ const slideitem = {
   anim: (i) => ({
     translateX: "10rem",
     transition: {
-      duration: 0.75,
+      duration: 0.55,
       delay: 0.1 * i,
       ease:"easeInOut"
     },
@@ -158,7 +158,7 @@ const Navbar = ({ active, setActive }) => {
                   custom={i}
                   onClick={() => setActive(!active)}
                   className={cn(
-                    "red w-fit text-5xl text-white transition-transform delay-200 duration-500",
+                    "redd w-fit text-5xl text-white transition-transform delay-200 duration-500",
                     {
                       // "translate-x-24":active
                     },
