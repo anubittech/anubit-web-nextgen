@@ -52,7 +52,7 @@ const HeroSection = () => {
           <h1 className="redd split-text-title w-full overflow-hidden pl-10 text-3xl font-bold uppercase text-blue-600 tablet:mt-10 tablet:text-6xl desktop:text-7xl">
             anubit technologies
           </h1>
-          <h1 className="redd split-text-subtitle w-full overflow-hidden tablet:pl-10  text-center text-lg capitalize tablet:text-left tablet:text-3xl desktop:text-5xl">
+          <h1 className="redd split-text-subtitle w-full overflow-hidden tablet:pl-10  text-center text-base capitalize tablet:text-left tablet:text-3xl desktop:text-5xl">
             crafting digital product, digital solutions
           </h1>
         </div>
