@@ -61,8 +61,8 @@ const Header = () => {
             );
           })}
         </div>
-        <div className="redd hidden rounded-lg bg-gradient-to-r from-blue-800 to-blue-500 tablet:block">
-          <button className="p-2 px-2 text-2xl text-white">
+        <div className="redd hidden rounded-3xl bg-gradient-to-r from-blue-800 to-blue-500 tablet:block">
+          <button className="p-2 px-3 text-xl text-white">
             <Link href={"/signup"}>Get a Quate</Link>
           </button>
         </div>

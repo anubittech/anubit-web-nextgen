@@ -35,14 +35,18 @@ const Card = ({ data, Ref }) => {
         ref={card}
         onMouseEnter={() => setArrow(!arrow)}
         onMouseLeave={() => setArrow(!arrow)}
-        className="redd cards flex h-96 w-96 flex-col items-start justify-between rounded-lg border bg-[#2196F3] p-2 px-5 py-5 text-white shadow-lg transition-colors duration-500 hover:bg-white"
+        className="redd cards flex h-96 w-96 flex-col items-start justify-between rounded-lg border bg-[#387ADF] p-2 px-5 py-5 text-white shadow-lg transition-colors duration-500 hover:bg-white"
       >
     <Link className="w-full h-full redd flex flex-col items-start justify-between" href={`/service/${data.slug}`}>
-        <div className="redd size-8">
+        <div className={cn("redd size-8 ",{
+          'text-blue-700':arrow,
+        })}>
          {data.icon}
         </div>
         <div className="border-b border-black text-left text-lg">
-          <p className="font-medium">{data.Desq}</p>
+          <p className={cn("font-medium",{
+            "text-black":arrow,
+          })}>{data.Desq}</p>
         </div>
         <div className="flex w-full items-center justify-between text-2xl font-semibold">
           <h1 className={cn("", { "text-blue-700": arrow })}>{data.Title}</h1>

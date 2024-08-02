@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className="redd relative flex min-h-96 w-full flex-col items-center justify-center bg-blue-950 p-2">
-      <div className="flex h-full w-full flex-col items-center justify-around tablet:flex-row">
+      <div className="flex h-full w-full flex-wrap flex-col items-center justify-around laptop:flex-row">
         <div className="redd relative flex  size-96 flex-col items-center justify-start pt-10 text-white">
           <div className="w-full">
             <h1 className="text-2xl font-bold italic">ANUBIT</h1>
