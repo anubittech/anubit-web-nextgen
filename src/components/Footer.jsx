@@ -34,8 +34,8 @@ const Footer = () => {
               "Privacy Policy",
               "Refund Policy",
               "Checkout User Flow",
-            ].map((item) => {
-              return <h1 className="">{item}</h1>;
+            ].map((item,i) => {
+              return <h1 key={i} className="">{item}</h1>;
             })}
             <div className="w-full border-b-2 pt-5">
               <h1>CREDITS</h1>

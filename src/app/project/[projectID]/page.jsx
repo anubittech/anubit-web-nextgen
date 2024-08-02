@@ -27,21 +27,21 @@ console.log(currentIndex);
   
   return (
     <div className="redd flex min-h-screen w-screen flex-col items-center justify-center pt-64 text-black">
-      <div className="redd flex h-96 w-full flex-col items-center justify-center">
-        <div className="redd flex h-48 w-full items-center justify-between px-10">
+      <div className="redd flex h-96 w-full flex-col items-center justify-center gap-10 tablet:gap-0">
+        <div className="redd flex flex-col tablet:flex-row h-48 w-full items-start tablet:items-center justify-between px-10">
           <h1 className="text-5xl font-bold">{ProjectItem.id}</h1>
           <h1 className="text-5xl font-bold">{ProjectItem.title}</h1>
           <h1 className="text-3xl font-normal">{ProjectItem.date}</h1>
         </div>
-        <div className="redd flex h-48 w-full items-center justify-between px-10">
+        <div className="redd flex flex-col tablet:flex-row h-48 w-full items-start tablet:items-center gap-5 tablet:gap-0 justify-between px-10">
           <h1 className="text-2xl font-medium">
-            Client: <br /> {ProjectItem.client}
-          </h1>
-          <h1 className="text-2xl font-medium">
-            Service: <br /> {ProjectItem.service}
+            Client: <br /> <span className="font-normal">{ProjectItem.client}</span> 
           </h1>
           <h1 className="text-xl font-medium">
-            Brief: <br /> {ProjectItem.desc}
+            Service: <br /> <span className="font-normal">{ProjectItem.service}</span> 
+          </h1>
+          <h1 className="text-xl font-medium">
+            Brief: <br /> <span className="font-normal">{ProjectItem.desc}</span> 
           </h1>
         </div>
       </div>

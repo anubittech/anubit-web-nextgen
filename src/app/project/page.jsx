@@ -33,13 +33,13 @@ const page = () => {
       </div>
       <div className="redd flex h-20 w-full items-center justify-center">
         <div className="flex gap-5">
-          {Categories.map((catagory) => (
+          {Categories.map((catagory,i) => (
             <Button
               variant={"outline"}
               className={cn("text-xl rounded-3xl", {
                 "text-blue-600": selectedCategory === catagory,
               })}
-              key={catagory}
+              key={i}
               onClick={() => CategoryClick(catagory)}
             >
               {catagory}
