@@ -16,7 +16,7 @@ const FAQ = () => {
         {FAQSheet.map((data, idx) => {
           return (
             <Accordion key={idx} type="single" collapsible className="redd w-full">
-              <AccordionItem value={data.id}>
+              <AccordionItem value={`Item-${data.id}`}>
                 <AccordionTrigger className="text-lg">{data.Q}</AccordionTrigger>
                 <AccordionContent className="text-base">{data.ANS}</AccordionContent>
               </AccordionItem>

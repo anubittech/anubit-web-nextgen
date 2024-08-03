@@ -25,28 +25,37 @@ const Card = ({ data, Ref }) => {
   // b450 aorus elit v2
   return (
     <motion.div
-        variants={cardUpAnim}
-        initial="init"
-        whileInView="anim"
-        custom={id}
-        // viewport={{
-        //   once: true,
-        // }}
-        ref={card}
-        onMouseEnter={() => setArrow(!arrow)}
-        onMouseLeave={() => setArrow(!arrow)}
-        className="redd cards flex h-96 w-96 flex-col items-start justify-between rounded-lg border bg-[#387ADF] p-2 px-5 py-5 text-white shadow-lg transition-colors duration-500 hover:bg-white"
+      variants={cardUpAnim}
+      initial="init"
+      whileInView="anim"
+      custom={id}
+      // viewport={{
+      //   once: true,
+      // }}
+      ref={card}
+      onMouseEnter={() => setArrow(!arrow)}
+      onMouseLeave={() => setArrow(!arrow)}
+      className="redd cards flex h-96 w-96 flex-col items-start justify-between rounded-lg border bg-[#387ADF] p-2 px-5 py-5 text-white shadow-lg transition-colors duration-500 hover:bg-slate-100"
+    >
+      <Link
+        className="redd flex h-full w-full flex-col items-start justify-between"
+        href={`/service/${data.slug}`}
       >
-    <Link className="w-full h-full redd flex flex-col items-start justify-between" href={`/service/${data.slug}`}>
-        <div className={cn("redd size-8 ",{
-          'text-blue-700':arrow,
-        })}>
-         {data.icon}
+        <div
+          className={cn("redd size-8", {
+            "text-blue-700": arrow,
+          })}
+        >
+          {data.icon}
         </div>
         <div className="border-b border-black text-left text-lg">
-          <p className={cn("font-medium",{
-            "text-black":arrow,
-          })}>{data.Desq}</p>
+          <p
+            className={cn("font-light", {
+              "text-black": arrow,
+            })}
+          >
+            {data.Desq}
+          </p>
         </div>
         <div className="flex w-full items-center justify-between text-2xl font-semibold">
           <h1 className={cn("", { "text-blue-700": arrow })}>{data.Title}</h1>
@@ -60,8 +69,8 @@ const Card = ({ data, Ref }) => {
             })}
           />
         </div>
-    </Link>
-      </motion.div>
+      </Link>
+    </motion.div>
   );
 };
 
